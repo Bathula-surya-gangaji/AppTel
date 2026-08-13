@@ -25,9 +25,7 @@ class signInViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "signUpViewController") as! signUpViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 
-    
     @IBAction func createButtonAction(_ sender: Any) {
         
        navigatetosignup()
