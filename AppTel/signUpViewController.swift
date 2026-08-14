@@ -9,9 +9,10 @@ import UIKit
 
 class signUpViewController: UIViewController {
 
+    var receivedText: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      print("Recieved data is:\(receivedText ?? "") ")
         // Do any additional setup after loading the view.
     }
     

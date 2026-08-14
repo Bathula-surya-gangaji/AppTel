@@ -21,9 +21,14 @@ class signInViewController: UIViewController {
     }
     func navigatetosignup(){
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "signUpViewController") as! signUpViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "signUpViewController") as? signUpViewController
+        
+        if let vc = vc {
+            vc.receivedText = emailTextField.text ?? "no text is being passed"
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     @IBAction func createButtonAction(_ sender: Any) {
